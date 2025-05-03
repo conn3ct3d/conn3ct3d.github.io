@@ -182,3 +182,36 @@ body{
     box-sizing: border-box;
     content:attr(title);
 }
+.stories-row {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 12px 0;
+    margin-left: 15px;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 68px;
+    font-size: 12px;
+}
+
+.story img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #5f0041;
+    padding: 2px;
+    background: white;
+    object-fit: cover;
+    margin-bottom: 4px;
+}
+hr{
+    border: none;
+    height: 1px;
+    background-color: #dbdbdb;
+    margin: 16px auto;
+    width: 80%;
+}

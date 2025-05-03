@@ -130,7 +130,8 @@ body{
     font-weight: 600;
     cursor: pointer;
     flex: 1;
-    letter-spacing: 3px;
+    font-family: 'HelveticaLocal';
+    font-weight: 400;
 }
 
 .dropdown-btn {
@@ -161,4 +162,18 @@ body{
     margin: 0 auto;
     padding: 16px;
 
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+    background-color: #fff;
+}
+.post{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    background-color: #fff;
 }

@@ -1,7 +1,8 @@
 const batteryIcon = document.getElementById('batteryIcon');
 const batteryImages = [
     '/images/low-battery.png',
-    '/images/fixed.png'
+    
+    '/images/broken.png'
 ];
 let index = 0;
 

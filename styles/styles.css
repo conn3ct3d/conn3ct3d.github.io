@@ -1,87 +1,70 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
+@font-face {
+    font-family: 'HelveticaLocal';
+    src: url(/styles/fonts/Helvetica.ttf) format(truetype);
+}
+
+html{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'HelveticaLocal' ,'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-html {
-    background-color: black;
+body{
+    background-color: #f5f5f5;
 }
-body {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
-    font-family: "Inconsolata", monospace;
-    text-align: center;
-    padding: 20px;
+.mobile-view img:not(.battery-indicator){
+    width: 20px;
+    height: auto;
 }
-h1 {
-    font-size: 3rem; 
-    margin-bottom: 1rem;
-    padding: 10px 15px;
-    font-style: italic;
+.mobile-view{
+    max-width: 430px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    position: relative;
 }
-nav {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 15px;
-    text-align: center;
-}
-.navbar {
+.status-bar{
+    height: 44px;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
+    padding: 0 15px;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e5e5;
 }
-ul {
+.status-bar-left, .status-bar-center, .status-bar-right {
     display: flex;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
+    align-items: center;
 }
-li {
-    font-size: 1.2rem;
-    padding: 5px 10px;
+.status-bar-left {
+    flex: 1;
 }
-a {
-    text-decoration: none;
-    color: white;
+.status-bar-center {
+    flex: 1;
+    justify-content: center;
 }
-a:hover {
-    text-decoration: underline;
-    color: yellow;
+.status-bar-right {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
 }
-small {
-    font-size: 1rem;
-    color: rgb(161, 161, 161);
-    padding: 10px 5px;
-    cursor: pointer;
+.time {
+    font-size: 14px;
+    font-weight: 600;
 }
-small:hover {
-    color: rgb(255, 255, 255);
-    font-style: italic;
-    text-decoration: underline;
+.signal-status, .wifi-indicator{
+    width: 12px;
+    height: auto;
 }
-
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    li {
-        font-size: 1rem;
-    }
-    .navbar {
-        flex-direction: column;
-    }
+.company-name{
+    margin: 0 5px;
+}
+.battery-indicator{
+    height: 40px;
+    width: auto;
 }

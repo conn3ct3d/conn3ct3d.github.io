@@ -3,27 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Dev</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <title>E.M. Reyes, Full Stack Dev</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <nav>
-        <div class="navbar">
-            <ul class="links">
-		        <li><a href="#">Emiliano Magana</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-            <small id="night-mode-btn">night life 🌙</small>
+    <div class="mobile-view">
+        <div class="status-bar">
+                <div class="status-bar-left">
+                    <img src="/images/signal-status.png" class="signal-status">
+                    <b class="company-name">LLÁMAME</b>
+                    <img src="/images/wifi.png" alt="" class="wifi-indicator">
+                </div>
+                <div class="status-bar-center">
+                    <b class="time">20:18</b>
+                 </div>
+                 <div class="status-bar-right">    
+                    <img src="/images/low-battery.png" alt="" class="battery-indicator" id="batteryIcon">
+                 </div>
         </div>
-    </nav>
-    <h1>Under development.</h1>
-    <h3><i>Come back later.</i></h3>
+    </div>
 
-    <script src="/scripts/night.js"></script>
+    <div class="content">
+
+    </div>
+
+    <script>
+        const batteryIcon = document.getElementById('batteryIcon');
+        const batteryImages = [
+            '/images/low-battery.png',
+            '/images/fixed.png'
+        ];
+        let index = 0;
+    
+        setInterval(() => {
+            index = (index + 1) % batteryImages.length;
+            batteryIcon.src = batteryImages[index];
+        }, 1000); // change every second
+    </script>
 </body>
 </html>

@@ -21,24 +21,23 @@
                     <img src="/images/low-battery.png" alt="" class="battery-indicator" id="batteryIcon">
                  </div>
         </div>
+    
+        <div class="header">
+            <div class="header-left">
+                <img src="/images/back.png" alt="" class="go-back">
+            </div>
+            <div class="header-center">
+                <h3>0x686reyes</h3>
+            </div>
+            <div class="header-right">
+                <img src="/images/more.png" alt="" class="more-options">
+            </div>
+        </div>
     </div>
-
     <div class="content">
 
     </div>
 
-    <script>
-        const batteryIcon = document.getElementById('batteryIcon');
-        const batteryImages = [
-            '/images/low-battery.png',
-            '/images/fixed.png'
-        ];
-        let index = 0;
-    
-        setInterval(() => {
-            index = (index + 1) % batteryImages.length;
-            batteryIcon.src = batteryImages[index];
-        }, 1000); // change every second
-    </script>
+    <script src="/scripts/battery.js"></script>
 </body>
 </html>

@@ -237,3 +237,6 @@ hr{
     z-index: -1; /* keeps it behind everything */
     opacity: .3; /* adjust for subtlety */
 }
+.social-media-name{
+    padding-top: 2px;
+}

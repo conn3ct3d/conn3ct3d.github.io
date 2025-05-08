@@ -17,6 +17,15 @@ body{
     min-height: 100vh;
     margin: 0;
 }
+body::before{
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #6b0049, #001249); /* Instagram-like gradient */
+    z-index: -2;
+}
 a{
     all:unset;
     font-weight: bold;
@@ -34,13 +43,21 @@ a{
     padding-top: 4px;
 }
 .mobile-view{
+    width: 100%;
     max-width: 430px;
+    height: 70vh;
     margin: 0 auto;
     background-color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.442);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     min-height: 90vh;
+    max-height: 90vh;
     position:relative;
     border-radius:5px;
+    margin: 0 auto;
+    scrollbar-width: none;
+}
+.mobile-view::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
 }
 .status-bar{
     height: 31px;
@@ -117,6 +134,12 @@ a{
     justify-content: space-between;
     flex: 1;
 }
+.profile-stats .stat strong {
+    font-size: 18px;
+}
+.profile-stats .stat span {
+    font-size: 11px;
+}
 .stat {
     text-align: center;
     margin: 0 8px;
@@ -191,7 +214,7 @@ a{
 
 .content-grid{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2px;
     background-color: #fff;
 }
@@ -254,4 +277,97 @@ hr{
 }
 .social-media-name{
     padding-top: 2px;
+}
+@media (min-width: 768px) {
+    .mobile-view {
+        max-width: 700px;
+        height: 70vh;
+        max-height: 70vh;
+        overflow-y: auto;
+        border-radius: 12px;
+    }
+
+    .profile {
+        padding: 24px;
+        font-size: 16px;
+    }
+
+    .profile-header .stat strong {
+        font-size: 20px;
+    }
+
+    .profile-header .stat span {
+        font-size: 14px;
+    }
+
+    .profile-bio p {
+        font-size: 18px;
+    }
+
+    .follow-btn {
+        padding: 10px 20px;
+        border-radius: 6px;
+    }
+    .follow-btn a{
+        font-size: 16px;
+    }
+
+    .stories-row {
+        justify-content: center;
+        padding: 25px 0;
+        margin-left: 0;
+        gap: 35px;
+    }
+
+    .story {
+        font-size: 14px;
+    }
+    .profile-picture{
+        width: 120px;
+        height: 120px;
+        
+    }
+    .header h3 {
+        font-size: 20px;
+    }
+
+    .link-in-bio {
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    .mobile-view {
+        height: 75vh;
+        max-width: 420px;
+    }
+    .profile-picture {
+        width: 66px;
+        height: 66px;
+    }
+    .story img {
+        width: 52px;
+        height: 52px;
+    }
+}
+@media (max-width: 480px) {
+    .mobile-view {
+        height: 80vh;
+        max-width: 100%;
+        margin: 0 8px;
+        border-radius: 8px;
+    }
+    .profile-picture {
+        width: 60px;
+        height: 60px;
+    }
+    .story img {
+        width: 48px;
+        height: 48px;
+    }
+    .profile-stats .stat strong {
+        font-size: 14px;
+    }
+    .profile-stats .stat span {
+        font-size: 10px;
+    }
 }

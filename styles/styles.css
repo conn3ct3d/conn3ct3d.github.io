@@ -357,17 +357,17 @@ hr{
         border-radius: 8px;
     }
     .profile-picture {
-        width: 60px;
-        height: 60px;
+        width: 76px;
+        height: 76px;
     }
     .story img {
         width: 48px;
         height: 48px;
     }
     .profile-stats .stat strong {
-        font-size: 14px;
+        font-size: 18px;
     }
     .profile-stats .stat span {
-        font-size: 10px;
+        font-size: 12px;
     }
 }

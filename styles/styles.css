@@ -23,7 +23,7 @@ body::before{
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom right, #6b0049, #001249); /* Instagram-like gradient */
+    background: linear-gradient(to bottom right, #b8f7ff, #ffc379);
     z-index: -2;
 }
 a{
@@ -124,9 +124,9 @@ a{
     width: 86px;
     height: 86px;
     border-radius: 50%;
-    border: 3px solid #d6249f;
+    border: 3px solid #fdffb5;
     padding: 2px;
-    background: linear-gradient(to right, #feda75, #d6239f, #285AEB);
+    background: linear-gradient(to right, #7e2201, #d6239f, #920200);
     object-fit: cover;
 }
 .profile-stats {
@@ -272,8 +272,8 @@ hr{
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    z-index: -1; /* keeps it behind everything */
-    opacity: .3; /* adjust for subtlety */
+    z-index: -1; 
+    opacity: .1; 
 }
 .social-media-name{
     padding-top: 2px;

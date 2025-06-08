@@ -30,6 +30,7 @@ a{
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 1px;
+
 }
 .status-bar img:not(.battery-indicator, .profile-picture){
     width: 17px;
@@ -225,18 +226,19 @@ a{
     object-fit: cover;
     display: block;
     background-color: #fff;
-    transition: transform .2s;
+    transition: transform .5s;
 }
 .post:hover {
-    border: 2px solid rgb(67, 0, 105);
+    border: 1.5px solid rgb(255, 241, 162);
     box-sizing: border-box;
     content:attr(title);
-    transform: scale(1.2);
+    transform: scale(1.1);
+    cursor: pointer;   
 }
 .stories-row {
     display: flex;
     gap: 12px;
-    overflow-x: auto;
+    overflow-x: visible;
     padding: 12px 0;
     margin-left: 15px;
 }

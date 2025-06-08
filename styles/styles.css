@@ -209,7 +209,10 @@ a{
     padding: 16px;
 
 }
-
+#backArrow:hover{
+    cursor: pointer;
+    scale: 1.5;
+}
 .content-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

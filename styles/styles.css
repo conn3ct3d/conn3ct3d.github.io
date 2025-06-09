@@ -124,7 +124,7 @@ a{
     width: 86px;
     height: 86px;
     border-radius: 50%;
-    border: 3px solid #00DDEB; 
+    border: 3px solid #007881; 
     padding: 2px;
     background: #007CF0; 
     object-fit: cover;
@@ -255,7 +255,8 @@ a{
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid #a4a4a4;
+    border-style: dashed solid double;
     padding: 2px;
     background: white;
     object-fit: cover;
@@ -279,7 +280,7 @@ hr{
     opacity: .1; 
 }
 .social-media-name{
-    padding-top: 2px;
+    font-family:'HelveticaLocal';
 }
 @media (min-width: 768px) {
     .mobile-view {
@@ -317,7 +318,7 @@ hr{
 
     .stories-row {
         justify-content: center;
-        padding: 25px 0;
+        padding: 15px 0;
         margin-left: 0;
         gap: 35px;
     }
